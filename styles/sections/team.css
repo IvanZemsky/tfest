@@ -8,18 +8,6 @@
    gap: 50px;
 }
 
-.team__title {
-   font-size: 2.1rem;
-   font-weight: 600;
-   text-align: center;
-}
-
-.team__text {
-   font-size: 1.2rem;
-   text-align: center;
-   font-weight: 300;
-}
-
 .team__items {
    display: flex;
    align-items: flex-start;

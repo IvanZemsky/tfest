@@ -1,0 +1,53 @@
+.advantages {
+   padding: 120px 0;
+   background-image: url("../../assets/img/ticket.png") no-repeat 100px,
+      url("../../assets/img/ticket.png") no-repeat 100px;
+}
+
+.advantages__title {
+   margin-bottom: 40px;
+}
+
+.advantages__text {
+   margin-bottom: 40px;
+}
+
+.advantages__items {
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
+}
+
+.advantages__card {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   border-radius: 20px;
+   padding: 35px;
+   background-color: var(--c-grey-bg);
+}
+
+.advantages__card-icon {
+   position: absolute;
+   right: -20px;
+   bottom: -10px;
+   width: 80px;
+   height: 80px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   transform: rotate(45deg);
+   z-index: 2;
+}
+
+.advantages__card:nth-child(3) .advantages__card-icon,
+.advantages__card:nth-child(4) .advantages__card-icon {
+   transform: rotate(0);
+}
+
+.advantages__card-title {
+   font-size: 1.1rem;
+   font-weight: 600;
+}

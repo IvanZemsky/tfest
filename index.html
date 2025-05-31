@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
    <head>
       <meta charset="UTF-8" />
@@ -22,6 +22,8 @@
       <link rel="stylesheet" href="styles/sections/partners.css" />
       <link rel="stylesheet" href="styles/sections/schedule.css" />
       <link rel="stylesheet" href="styles/sections/contacts.css" />
+      <link rel="stylesheet" href="styles/sections/advantages.css" />
+      <link rel="stylesheet" href="styles/sections/questions.css" />
       <!-- Scripts -->
       <script defer src="script/emergence.js"></script>
       <script defer src="script/floatings.js"></script>
@@ -29,6 +31,7 @@
       <script defer src="script/burgerMenu.js"></script>
       <script defer src="script/schedule.js"></script>
       <script defer src="script/mail.js"></script>
+      <script defer src="script/accordion.js"></script>
       <script
          type="text/javascript"
          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -224,8 +227,8 @@
                      </svg>
                   </div>
                   <ul class="header__links">
-                     <li><a href="#" class="link">Вопросы</a></li>
-                     <li><a href="#" class="link">Почему мы</a></li>
+                     <li><a href="#questions" class="link">Вопросы</a></li>
+                     <li><a href="#advantages" class="link">Почему мы</a></li>
                      <li><a href="#contacts" class="link">Контакты</a></li>
                   </ul>
                </nav>
@@ -259,12 +262,13 @@
                      Беларуси, Казахстана, Армении, Азербайджана. Познакомьтесь
                      с талантливыми артистами и незабываемыми спектаклями!
                   </p>
-                  <button
+                  <a
+                     href="#about"
                      class="intro__btn button"
                      data-animation="vertical-fade-in 1.5s ease-in-out forwards"
                   >
                      Узнать больше
-                  </button>
+                  </a>
                </div>
             </div>
          </div>
@@ -289,30 +293,58 @@
                      class="about__card-text hidden-for-emergence"
                      data-animation="vertical-fade-in 1s ease-in-out forwards"
                   >
-                     Мы занимаемся организацией гастролей известных спектаклей и
-                     оказанием услуг по бронированию, а также организацией
+                     С 2017 года наша компания организовывает гастроли известных
+                     спектаклей из Москвы и Санкт-Петербурга в более 20 крупных
+                     городах России, Беларуси, Казахстана, Армении, Азербайджана
+                     с участием народных и заслуженных артистов.
+                  </p>
+               </div>
+
+               <div
+                  class="about__img-card hidden-for-emergence"
+                  data-animation="vertical-fade-in 1s ease-in-out forwards"
+               >
+                  <p
+                     class="about__img-card-desc hidden-for-emergence"
+                     data-animation="static-fade-in 1s ease-in-out forwards"
+                  >
+                     За нашими плечами множество упешных мероприятий. Мы также
+                     занимаемся оказанием услуг по бронированию, организацией
                      конференций и выставок. Наша цель — развивать
                      исполнительское искусство и делать его доступным для
                      широкой аудитории.
                   </p>
+                  <img
+                     class="about__img"
+                     src="assets/img/intro.png"
+                     alt="Маскот"
+                  />
                </div>
-
-               <img
-                  class="about__img"
-                  src="assets/img/mascot.png"
-                  alt="Маскот"
-               />
+            </div>
+            <div
+               class="about__quote-card hidden-for-emergence"
+               data-animation="vertical-fade-in 1.25s ease-in-out forwards"
+            >
+               <p class="about__quote-text">
+                  Если бы мне звонили и приглашали в театр, я бы с удовольствием
+                  соглашался и покупал билет
+               </p>
+               <p
+                  class="about__quote-author hidden-for-emergence"
+                  data-animation="vertical-fade-in 1.5s ease-in-out forwards"
+               >
+                  — <strong>Пулод Даврони</strong>, <i>основатель компании</i>
+               </p>
             </div>
          </div>
       </section>
 
       <!-- Portfolio -->
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
          <div class="portfolio__content wrapper">
             <h2
                class="portfolio__title title hidden-for-emergence"
                data-animation="vertical-fade-in 1s ease-in-out forwards"
-               id="portfolio"
             >
                Наши работы
             </h2>
@@ -451,6 +483,78 @@
          </div>
       </section>
 
+      <!-- Advantages -->
+      <section class="advantages" id="advantages">
+         <div class="advantages__content wrapper">
+            <h2
+               class="advantages__title title hidden-for-emergence"
+               data-animation="vertical-fade-in 1s ease-in-out forwards"
+            >
+               Почему мы?
+            </h2>
+            <p
+               class="advantages__text desc hidden-for-emergence"
+               data-animation="static-fade-in 1s ease-in-out forwards"
+            >
+               А потому что у нас есть...
+            </p>
+            <div class="advantages__items">
+               <div class="advantages__card">
+                  <div
+                     class="advantages__card-icon hidden-for-emergence"
+                     data-animation="vertical-fade-in 1s ease-in-out forwards"
+                  >
+                     <img src="assets/svg/icons/crown.svg" alt="" />
+                  </div>
+                  <p class="advantages__card-title">Эксклюзивные спектакли</p>
+                  <p class="advantages__card-desc">
+                     С высоким уровнем культуры и участием народных и
+                     заслуженных артистов РФ.
+                  </p>
+               </div>
+               <div class="advantages__card">
+                  <div
+                     class="advantages__card-icon hidden-for-emergence"
+                     data-animation="vertical-fade-in 1.25s ease-in-out forwards"
+                  >
+                     <img src="assets/svg/icons/user.svg" alt="" />
+                  </div>
+                  <p class="advantages__card-title">Персональный менеджер</p>
+                  <p class="advantages__card-desc">
+                     Он подберёт удобные места, поможет оплатить и решить
+                     казусные вопросы/.
+                  </p>
+               </div>
+               <div class="advantages__card">
+                  <div
+                     class="advantages__card-icon hidden-for-emergence"
+                     data-animation="vertical-fade-in 1.5s ease-in-out forwards"
+                  >
+                     <img src="assets/svg/icons/percent.svg" alt="" />
+                  </div>
+                  <p class="advantages__card-title">Билеты со скидками</p>
+                  <p class="advantages__card-desc">
+                     Билеты без наценок и кассовых сборов и дополнительные
+                     скидки по специальным промокодам.
+                  </p>
+               </div>
+               <div class="advantages__card">
+                  <div
+                     class="advantages__card-icon hidden-for-emergence"
+                     data-animation="vertical-fade-in 2s ease-in-out forwards"
+                  >
+                     <img src="assets/svg/icons/checked.svg" alt="" />
+                  </div>
+                  <p class="advantages__card-title">Программы лояльности</p>
+                  <p class="advantages__card-desc">
+                     Продление брони и возможность оформить дизайнерские билеты
+                     в подарок.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
       <!-- Partners -->
       <section class="partners">
          <div class="partners__content wrapper">
@@ -497,105 +601,91 @@
                         />
                      </div>
                      <div class="schedule__card-content">
-                        <div class="schedule__card-header">
-                           <div class="schedule__card-header-right">
-                              <p class="schedule__card-title">
-                                 Жениться Вам надо, барин!
-                              </p>
-                              <p class="schedule__card-city">Ярославль</p>
-                           </div>
-                           <div class="schedule__card-header-left">
-                              <p class="schedule__card-date">15 сентября,</p>
-                              <p class="schedule__card-time">19:00</p>
-                           </div>
-                        </div>
+                        <p class="schedule__card-title">
+                           Жениться Вам надо, барин!
+                        </p>
+
                         <div class="schedule__card-desc">
                            Известный спектакль из Москвы с участием заслуженных
                            артистов.
                         </div>
+
+                        <div class="schedule__card-footer">
+                           <p class="schedule__card-city">Ярославль,</p>
+                           <p class="schedule__card-date">15 сентября,</p>
+                           <p class="schedule__card-time">19:00</p>
+                        </div>
                      </div>
                   </a>
-
                   <a class="schedule__card" href="#">
                      <div class="schedule__card-img">
                         <img
-                           src="assets/img/schedule/schedule-2.png"
+                           src="assets/img/schedule/schedule-1.png"
                            alt="Карточка 1"
                         />
                      </div>
                      <div class="schedule__card-content">
-                        <div class="schedule__card-header">
-                           <div class="schedule__card-header-right">
-                              <p class="schedule__card-title">
-                                 Сирано де Бержерак
-                              </p>
-                              <p class="schedule__card-city">Уфа</p>
-                           </div>
-                           <div class="schedule__card-header-left">
-                              <p class="schedule__card-date">19 сентября,</p>
-                              <p class="schedule__card-time">16:00</p>
-                           </div>
-                        </div>
+                        <p class="schedule__card-title">
+                           Жениться Вам надо, барин!
+                        </p>
+
                         <div class="schedule__card-desc">
-                           Спектакль из Санкт-Петербурга с участием народных
+                           Известный спектакль из Москвы с участием заслуженных
                            артистов.
                         </div>
+
+                        <div class="schedule__card-footer">
+                           <p class="schedule__card-city">Ярославль,</p>
+                           <p class="schedule__card-date">15 сентября,</p>
+                           <p class="schedule__card-time">19:00</p>
+                        </div>
                      </div>
                   </a>
-
                   <a class="schedule__card" href="#">
                      <div class="schedule__card-img">
                         <img
-                           src="assets/img/schedule/schedule-3.png"
+                           src="assets/img/schedule/schedule-1.png"
                            alt="Карточка 1"
                         />
                      </div>
                      <div class="schedule__card-content">
-                        <div class="schedule__card-header">
-                           <div class="schedule__card-header-right">
-                              <p class="schedule__card-title">
-                                 Салон красоты, или о чем говорят женщины
-                              </p>
-                              <p class="schedule__card-city">Краснодар</p>
-                           </div>
-                           <div class="schedule__card-header-left">
-                              <p class="schedule__card-date">22 сентября,</p>
-                              <p class="schedule__card-time">16:00</p>
-                           </div>
-                        </div>
+                        <p class="schedule__card-title">
+                           Жениться Вам надо, барин!
+                        </p>
+
                         <div class="schedule__card-desc">
-                           Детективная комедия, где раскрываются истории о
-                           любви, предательстве и поиске себя!
+                           Известный спектакль из Москвы с участием заслуженных
+                           артистов.
+                        </div>
+
+                        <div class="schedule__card-footer">
+                           <p class="schedule__card-city">Ярославль,</p>
+                           <p class="schedule__card-date">15 сентября,</p>
+                           <p class="schedule__card-time">19:00</p>
                         </div>
                      </div>
                   </a>
-
                   <a class="schedule__card" href="#">
                      <div class="schedule__card-img">
                         <img
-                           src="assets/img/schedule/schedule-4.jpg"
+                           src="assets/img/schedule/schedule-1.png"
                            alt="Карточка 1"
                         />
                      </div>
                      <div class="schedule__card-content">
-                        <div class="schedule__card-header">
-                           <div class="schedule__card-header-right">
-                              <p class="schedule__card-title">
-                                 Бальзаминовъ. Женитьба
-                              </p>
-                              <p class="schedule__card-city">
-                                 Гастрольный спектакль
-                              </p>
-                           </div>
-                           <div class="schedule__card-header-left">
-                              <p class="schedule__card-date">9 июля</p>
-                              <p class="schedule__card-time">19:00</p>
-                           </div>
-                        </div>
+                        <p class="schedule__card-title">
+                           Жениться Вам надо, барин!
+                        </p>
+
                         <div class="schedule__card-desc">
-                           Спектакль о наивном и самодовольном чиновнике Михаиле
-                           Бальзаминове, который мечтает выгодно жениться — не
-                           по любви, а по расчёту.
+                           Известный спектакль из Москвы с участием заслуженных
+                           артистов.
+                        </div>
+
+                        <div class="schedule__card-footer">
+                           <p class="schedule__card-city">Ярославль,</p>
+                           <p class="schedule__card-date">15 сентября,</p>
+                           <p class="schedule__card-time">19:00</p>
                         </div>
                      </div>
                   </a>
@@ -609,105 +699,91 @@
                         />
                      </div>
                      <div class="schedule__card-content">
-                        <div class="schedule__card-header">
-                           <div class="schedule__card-header-right">
-                              <p class="schedule__card-title">
-                                 Жениться Вам надо, барин!
-                              </p>
-                              <p class="schedule__card-city">Ярославль</p>
-                           </div>
-                           <div class="schedule__card-header-left">
-                              <p class="schedule__card-date">15 сентября,</p>
-                              <p class="schedule__card-time">19:00</p>
-                           </div>
-                        </div>
+                        <p class="schedule__card-title">
+                           Жениться Вам надо, барин!
+                        </p>
+
                         <div class="schedule__card-desc">
                            Известный спектакль из Москвы с участием заслуженных
                            артистов.
                         </div>
+
+                        <div class="schedule__card-footer">
+                           <p class="schedule__card-city">Ярославль,</p>
+                           <p class="schedule__card-date">15 сентября,</p>
+                           <p class="schedule__card-time">19:00</p>
+                        </div>
                      </div>
                   </a>
-
                   <a class="schedule__card" href="#">
                      <div class="schedule__card-img">
                         <img
-                           src="assets/img/schedule/schedule-2.png"
+                           src="assets/img/schedule/schedule-1.png"
                            alt="Карточка 1"
                         />
                      </div>
                      <div class="schedule__card-content">
-                        <div class="schedule__card-header">
-                           <div class="schedule__card-header-right">
-                              <p class="schedule__card-title">
-                                 Сирано де Бержерак
-                              </p>
-                              <p class="schedule__card-city">Уфа</p>
-                           </div>
-                           <div class="schedule__card-header-left">
-                              <p class="schedule__card-date">19 сентября,</p>
-                              <p class="schedule__card-time">16:00</p>
-                           </div>
-                        </div>
+                        <p class="schedule__card-title">
+                           Жениться Вам надо, барин!
+                        </p>
+
                         <div class="schedule__card-desc">
-                           Спектакль из Санкт-Петербурга с участием народных
+                           Известный спектакль из Москвы с участием заслуженных
                            артистов.
                         </div>
+
+                        <div class="schedule__card-footer">
+                           <p class="schedule__card-city">Ярославль,</p>
+                           <p class="schedule__card-date">15 сентября,</p>
+                           <p class="schedule__card-time">19:00</p>
+                        </div>
                      </div>
                   </a>
-
                   <a class="schedule__card" href="#">
                      <div class="schedule__card-img">
                         <img
-                           src="assets/img/schedule/schedule-3.png"
+                           src="assets/img/schedule/schedule-1.png"
                            alt="Карточка 1"
                         />
                      </div>
                      <div class="schedule__card-content">
-                        <div class="schedule__card-header">
-                           <div class="schedule__card-header-right">
-                              <p class="schedule__card-title">
-                                 Салон красоты, или о чем говорят женщины
-                              </p>
-                              <p class="schedule__card-city">Краснодар</p>
-                           </div>
-                           <div class="schedule__card-header-left">
-                              <p class="schedule__card-date">22 сентября,</p>
-                              <p class="schedule__card-time">16:00</p>
-                           </div>
-                        </div>
+                        <p class="schedule__card-title">
+                           Жениться Вам надо, барин!
+                        </p>
+
                         <div class="schedule__card-desc">
-                           Детективная комедия, где раскрываются истории о
-                           любви, предательстве и поиске себя!
+                           Известный спектакль из Москвы с участием заслуженных
+                           артистов.
+                        </div>
+
+                        <div class="schedule__card-footer">
+                           <p class="schedule__card-city">Ярославль,</p>
+                           <p class="schedule__card-date">15 сентября,</p>
+                           <p class="schedule__card-time">19:00</p>
                         </div>
                      </div>
                   </a>
-
                   <a class="schedule__card" href="#">
                      <div class="schedule__card-img">
                         <img
-                           src="assets/img/schedule/schedule-4.jpg"
+                           src="assets/img/schedule/schedule-1.png"
                            alt="Карточка 1"
                         />
                      </div>
                      <div class="schedule__card-content">
-                        <div class="schedule__card-header">
-                           <div class="schedule__card-header-right">
-                              <p class="schedule__card-title">
-                                 Бальзаминовъ. Женитьба
-                              </p>
-                              <p class="schedule__card-city">
-                                 Гастрольный спектакль
-                              </p>
-                           </div>
-                           <div class="schedule__card-header-left">
-                              <p class="schedule__card-date">9 июля</p>
-                              <p class="schedule__card-time">19:00</p>
-                           </div>
-                        </div>
+                        <p class="schedule__card-title">
+                           Жениться Вам надо, барин!
+                        </p>
+
                         <div class="schedule__card-desc">
-                           Спектакль о наивном и самодовольном чиновнике Михаиле
-                           Бальзаминове, который мечтает выгодно жениться — не
-                           по любви, а по расчёту.
+                           Известный спектакль из Москвы с участием заслуженных
+                           артистов.
+                        </div>
+
+                        <div class="schedule__card-footer">
+                           <p class="schedule__card-city">Ярославль,</p>
+                           <p class="schedule__card-date">15 сентября,</p>
+                           <p class="schedule__card-time">19:00</p>
                         </div>
                      </div>
                   </a>
@@ -724,12 +800,11 @@
       </section>
 
       <!-- Contacts -->
-      <section class="contacts">
+      <section class="contacts" id="contacts">
          <div class="contacts__content wrapper">
             <p
                class="contacts__title title hidden-for-emergence"
                data-animation="vertical-fade-in 1s ease-in-out forwards"
-               id="contacts"
             >
                Свяжитесь с нами
             </p>
@@ -801,11 +876,7 @@
                      </a>
                   </div>
                </div>
-               <form
-                  method="POST"
-                  id="contact-form"
-                  class="contacts__form"
-               >
+               <form method="POST" id="contact-form" class="contacts__form">
                   <input
                      class="contacts__input"
                      type="email"
@@ -825,6 +896,180 @@
                   ></textarea>
                   <button class="button">Отправить запрос</button>
                </form>
+            </div>
+         </div>
+      </section>
+
+      <!-- Questions -->
+      <section class="questions" id="questions">
+         <div class="questions__content wrapper">
+            <h2
+               class="questions__title title hidden-for-emergence"
+               data-animation="vertical-fade-in 1s ease-in-out forwards"
+            >
+               Вопросы
+            </h2>
+            <div class="questions__items">
+               <div class="questions__item">
+                  <header class="questions__item-header">
+                     <p class="questions__item-title">
+                        Существуют ли у Вас скидки?
+                     </p>
+                     <button class="questions__item-btn">
+                        <svg
+                           viewBox="0 0 40 40"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M0 36.7696L36.7696 0L39.598 2.82843L2.82843 39.598L0 36.7696Z"
+                           />
+                           <path
+                              d="M36.7696 39.598L0 2.82843L2.82843 0L39.598 36.7696L36.7696 39.598Z"
+                           />
+                        </svg>
+                     </button>
+                  </header>
+                  <div class="questions__item-text">
+                     <div class="questions__item-text-wrapper">
+                        Да ✅<br />В&nbsp;каждом городе действуют индивидуальные
+                        акции и&nbsp;скидки, для ознакомления выбирайте Ваш
+                        город в&nbsp;списке или уточняйте информацию
+                        у&nbsp;театрального менеджера.
+                     </div>
+                  </div>
+               </div>
+               <div class="questions__item">
+                  <header class="questions__item-header">
+                     <p class="questions__item-title">
+                        Есть ли возможность забронировать билеты сейчас, а
+                        выкупить их позже?
+                     </p>
+                     <button class="questions__item-btn">
+                        <svg
+                           viewBox="0 0 40 40"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M0 36.7696L36.7696 0L39.598 2.82843L2.82843 39.598L0 36.7696Z"
+                           />
+                           <path
+                              d="M36.7696 39.598L0 2.82843L2.82843 0L39.598 36.7696L36.7696 39.598Z"
+                           />
+                        </svg>
+                     </button>
+                  </header>
+                  <div class="questions__item-text">
+                     <div class="questions__item-text-wrapper">
+                        Да ✅ <br />
+                        Наша компания предоставляет возможность сначала
+                        забронировать билеты за фиксированную сумму, а
+                        оставшуюся часть денежных средств выслать за 2−3 недели
+                        до начала спектакля! <br /><br />
+                        Это позволит Вам забронировать лучшие места, пока есть
+                        возможность. Подробности бронирования уточняйте у своего
+                        ЛИЧНОГО ТЕАТРАЛЬНОГО МЕНЕДЖЕРА
+                     </div>
+                  </div>
+               </div>
+               <div class="questions__item">
+                  <header class="questions__item-header">
+                     <p class="questions__item-title">
+                        При покупке билетов ошибочно выбрал (а) не ту дату
+                        мероприятия. Можете обменять мне билеты на другую дату?
+                     </p>
+                     <button class="questions__item-btn">
+                        <svg
+                           viewBox="0 0 40 40"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M0 36.7696L36.7696 0L39.598 2.82843L2.82843 39.598L0 36.7696Z"
+                           />
+                           <path
+                              d="M36.7696 39.598L0 2.82843L2.82843 0L39.598 36.7696L36.7696 39.598Z"
+                           />
+                        </svg>
+                     </button>
+                  </header>
+                  <div class="questions__item-text">
+                     <div class="questions__item-text-wrapper">
+                        Да ✅ <br />
+                        Вы всегда можете обменять свои билеты на другую дату, на
+                        другое мероприятие. Ваш личный театральный менеджер
+                        поможет Вам в этом!
+                     </div>
+                  </div>
+               </div>
+
+               <div class="questions__item">
+                  <header class="questions__item-header">
+                     <p class="questions__item-title">
+                        Купил (а) билеты, но по некоторым причинам не могу
+                        посетить мероприятие. Могу ли я вернуть билеты и
+                        получить денежные средства обратно?
+                     </p>
+                     <button class="questions__item-btn">
+                        <svg
+                           viewBox="0 0 40 40"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M0 36.7696L36.7696 0L39.598 2.82843L2.82843 39.598L0 36.7696Z"
+                           />
+                           <path
+                              d="M36.7696 39.598L0 2.82843L2.82843 0L39.598 36.7696L36.7696 39.598Z"
+                           />
+                        </svg>
+                     </button>
+                  </header>
+                  <div class="questions__item-text">
+                     <div class="questions__item-text-wrapper">
+                        Да ✅ <br />
+                        К возврату принимаются только те билеты, которые
+                        ПРИОБРЕТЕНЫ У НАС. Возврат денежных средств
+                        осуществляется в размере номинальной стоимости билета.
+                        Сумма к возврату определяется в соответствии с
+                        требованиями действующего законодательства и зависит от
+                        срока обращения.
+                     </div>
+                  </div>
+               </div>
+               <div class="questions__item">
+                  <header class="questions__item-header">
+                     <p class="questions__item-title">
+                        При покупке билетов online допустил (а) ошибку в
+                        написании своего электронного адреса, в связи с этим не
+                        получил (а) билеты. Как исправить адрес почты и получить
+                        билеты?
+                     </p>
+                     <button class="questions__item-btn">
+                        <svg
+                           viewBox="0 0 40 40"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              d="M0 36.7696L36.7696 0L39.598 2.82843L2.82843 39.598L0 36.7696Z"
+                           />
+                           <path
+                              d="M36.7696 39.598L0 2.82843L2.82843 0L39.598 36.7696L36.7696 39.598Z"
+                           />
+                        </svg>
+                     </button>
+                  </header>
+                  <div class="questions__item-text">
+                     <div class="questions__item-text-wrapper">
+                        Позвоните по нашему номеру горячей линии или напишите в
+                        социальные сети, наш специалист с радостью поможет Вам!
+                        <br><br>
+                        📞 Горячая линия: 8−800−505−51−49
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </section>

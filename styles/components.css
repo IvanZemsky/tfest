@@ -48,6 +48,18 @@
    background-color: var(--c-yellow);
 }
 
+.title {
+   font-size: 2.1rem;
+   font-weight: 600;
+   text-align: center;
+}
+
+.desc {
+   font-size: 1.2rem;
+   text-align: center;
+   font-weight: 300;
+}
+
 /* burger */
 
 .burger {

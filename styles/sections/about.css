@@ -1,4 +1,5 @@
 .about {
+   padding: 140px 0;
    position: relative;
    background-image: linear-gradient(
       0.899turn,
@@ -8,20 +9,17 @@
 }
 
 .about__row {
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
    gap: 20px;
-   align-items: flex-end;
+   margin-bottom: 40px;
 }
 
 .about__card {
    position: relative;
    display: flex;
    flex-direction: column;
-   max-width: 552px;
-   width: 100%;
-   flex-shrink: 0;
    gap: 16px;
-   margin: 120px 0;
    padding: 60px 80px 60px 60px;
    background-color: var(--c-white);
    border-radius: 20px;
@@ -36,8 +34,9 @@
    border: none;
 }
 
-.about__card-title {
+.about__card-title.title {
    font-size: 1.9rem;
+   text-align: left;
 }
 
 .about__card-text {
@@ -47,7 +46,55 @@
 }
 
 .about__img {
-   width: 650px;
+   width: 100%;
+   min-width: 100px;
    height: auto;
-   min-width: 300px;
+}
+
+.about__img-card {
+   display: flex;
+   flex-direction: column;
+      justify-content: space-between;
+   padding: 30px;
+   border-radius: 20px;
+   background-color: var(--c-white);
+   font-weight: 400;
+   font-size: 0.9rem;
+   line-height: 1.5;
+}
+
+.about__quote-card {
+   position: relative;
+   border-radius: 20px;
+   padding: 68px;
+   background-color: var(--c-white);
+   text-align: center;
+}
+
+.about__quote-card::before {
+   content: "“";
+   position: absolute;
+   top: 10px;
+   left: 15px;
+   font-size: 4.5rem;
+   font-weight: 600;
+   color: var(--c-black);
+   z-index: 1;
+}
+
+.about__quote-text {
+   margin-bottom: 20px;
+   font-size: 1.3rem;
+}
+
+@media screen and (max-width: 970px) {
+   .about__row {
+      grid-template-columns: 1fr;
+   }
+   .about__card-title.title{
+      text-align: center;
+   }
+   .about__card hr{
+      margin: 0 auto;
+   }
 }
