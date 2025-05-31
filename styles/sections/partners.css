@@ -1,0 +1,24 @@
+.partners{
+   background-color: var(--c-green-light);
+   padding: 120px 0;
+}
+
+.partners__title{
+   margin-bottom: 60px;
+   font-size: 2.1rem;
+   font-weight: 600;
+   text-align: center;
+}
+
+.partners__items{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 25px;
+}
+
+.partners__items img{
+   width: 200px;
+   height: auto;
+}

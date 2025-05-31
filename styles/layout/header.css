@@ -1,0 +1,131 @@
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 900;
+   transition: all 0.15s linear;
+}
+
+.header__close-menu {
+   position: absolute;
+   top: 25px;
+   right: 15px;
+   display: none;
+   width: 25px;
+   height: 25px;
+}
+
+.header .burger {
+   display: none;
+}
+
+.header__content {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 15px;
+   padding: 15px 0;
+}
+
+.header__logo.header__logo--mobile {
+   display: none;
+}
+
+.header__logo.header__logo--mobile svg {
+   width: 80px;
+   fill: var(--c-white);
+}
+
+.header__nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 16px;
+   padding-bottom: 5px;
+   width: 100%;
+}
+
+.header__links {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+   font-weight: 500;
+}
+
+.header__links a {
+   color: var(--c-white);
+   transition: 0.15s all linear;
+}
+
+.header__logo svg {
+   fill: var(--c-white);
+   width: 95px;
+   height: auto;
+}
+
+.header--filled {
+   background-color: var(--c-white);
+   border-bottom: 1px solid var(--c-grey);
+}
+
+.header--filled .header__links a {
+   color: var(--c-black);
+}
+
+.header--filled .header__logo svg {
+   fill: var(--c-black);
+}
+
+.header--filled .header__logo--mobile {
+   fill: var(--c-black);
+}
+
+.header--filled .burger .burger__line {
+   background-color: var(--c-black);
+}
+
+@media screen and (max-width: 825px) {
+   .header__content {
+      padding: 7px 0;
+   }
+   .header__nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      padding: 35px 55px 25px 25px;
+      flex-direction: column;
+      transform: translateY(-100%);
+      transition: all 0.25s linear;
+      gap: 15px;
+      background-color: var(--c-white);
+      border-bottom: 1px solid var(--c-grey);
+   }
+   .header .burger {
+      display: flex;
+   }
+   .header__nav--opened {
+      transform: translateY(0);
+   }
+   .header__links {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+   }
+   .header__links a {
+      color: var(--c-black);
+   }
+   .header__logo svg {
+      fill: var(--c-black);
+   }
+   .header__logo--desktop {
+      order: 3;
+   }
+   .header__logo.header__logo--mobile {
+      display: block;
+   }
+   .header__close-menu {
+      display: block;
+   }
+}

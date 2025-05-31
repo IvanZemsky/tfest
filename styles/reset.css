@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-family: "Montserrat", sans-serif;
+   font-size: 20px;
+   color: var(--c-black);
+   scroll-behavior: smooth;
+}
+
+ul,
+li {
+   list-style: none;
+}
+
+a,
+button,
+input,
+textarea {
+   font-family: "Montserrat", sans-serif;
+   text-shadow: none;
+   outline: none;
+   box-shadow: none;
+   background: none;
+}
+
+textarea {
+   resize: vertical;
+}
+
+button{
+   border: none;
+   cursor: pointer;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+hr{
+   outline: none;
+   box-shadow:  none;
+   border: none;
+}

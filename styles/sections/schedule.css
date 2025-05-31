@@ -1,0 +1,103 @@
+.schedule {
+   padding: 120px 0;
+}
+
+.schedule-wrapper {
+   max-width: 1400px;
+   margin: 0 auto;
+   width: 100%;
+   padding: 0 25px;
+}
+
+.schedule__content {
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+}
+
+.schedule__title {
+   font-size: 2.1rem;
+   font-weight: 600;
+   text-align: center;
+}
+
+.schedule__text {
+   font-size: 1.2rem;
+   text-align: center;
+   font-weight: 300;
+}
+
+.schedule__items {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
+}
+
+.schedule__card {
+   display: flex;
+   gap: 20px;
+   padding: 10px;
+   border-radius: 10px;
+   color: var(--c-black);
+   transition: all 0.15s linear;
+}
+
+.schedule__card:hover{
+   background-color: rgba(255, 213, 43, 0.15);
+}
+
+.schedule__card-img {
+   width: 230px;
+   aspect-ratio: 1.6 / 1;
+   overflow: hidden;
+   border-radius: 15px;
+   flex-shrink: 0;
+}
+
+.schedule__card-img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.schedule__card-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 25px;
+}
+
+.schedule__card-header {
+   display: flex;
+   justify-content: space-between;
+   gap: 22px;
+   font-weight: 500;
+}
+
+.schedule__card-title {
+   font-size: 1rem;
+   font-weight: 600;
+   margin-bottom: 0.5rem;
+}
+
+.schedule__card-city {
+   font-size: 0.7rem;
+}
+
+.schedule__card-time,
+.schedule__card-date {
+   white-space: nowrap;
+   text-align: right;
+   font-size: 0.9rem;
+}
+
+.schedule__card-desc {
+   max-width: 500px;
+   font-size: 0.9rem;
+   font-weight: 300;
+}
+
+.schedule__show-more-btn{
+   align-self: center;
+   color: var(--c-white);
+}
