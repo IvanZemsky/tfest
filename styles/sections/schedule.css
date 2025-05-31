@@ -27,11 +27,27 @@
    font-weight: 300;
 }
 
+.schedule__items-container {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   overflow: hidden;
+   transition: height 0.5s ease-in-out;
+}
+
 .schedule__items {
    display: grid;
    grid-template-columns: 1fr 1fr;
    gap: 40px;
 }
+
+/* hidden */
+
+.schedule__items--hidden {
+   display: none;
+}
+
+/* card */
 
 .schedule__card {
    display: flex;

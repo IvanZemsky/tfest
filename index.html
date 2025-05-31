@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
    <head>
       <meta charset="UTF-8" />
@@ -8,9 +8,9 @@
       <link rel="stylesheet" href="styles/vars.css" />
       <link rel="stylesheet" href="styles/reset.css" />
       <link rel="stylesheet" href="styles/components.css" />
-      <link rel="stylesheet" href="/styles/floatings.css" />
+      <link rel="stylesheet" href="styles/floatings.css" />
       <!-- Animations-->
-      <link rel="stylesheet" href="/styles/animations/animations.css" />
+      <link rel="stylesheet" href="styles/animations/animations.css" />
       <!-- layout -->
       <link rel="stylesheet" href="styles/layout/header.css" />
       <link rel="stylesheet" href="styles/layout/footer.css" />
@@ -23,10 +23,16 @@
       <link rel="stylesheet" href="styles/sections/schedule.css" />
       <link rel="stylesheet" href="styles/sections/contacts.css" />
       <!-- Scripts -->
-      <script defer src="/script/emergence.js"></script>
-      <script defer src="/script/floatings.js"></script>
-      <script defer src="/script/headerScroll.js"></script>
-      <script defer src="/script/burgerMenu.js"></script>
+      <script defer src="script/emergence.js"></script>
+      <script defer src="script/floatings.js"></script>
+      <script defer src="script/headerScroll.js"></script>
+      <script defer src="script/burgerMenu.js"></script>
+      <script defer src="script/schedule.js"></script>
+      <script defer src="script/mail.js"></script>
+      <script
+         type="text/javascript"
+         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      ></script>
    </head>
    <body>
       <header class="header" id="header">
@@ -231,7 +237,7 @@
       <section class="intro">
          <video
             class="intro__video"
-            src="/assets/video/intro.mp4"
+            src="assets/video/intro.mp4"
             autoplay
             loop
             muted
@@ -480,120 +486,240 @@
                Ближайшие события театрального фестиваля порадуют увлекательными
                постановками и талантливыми актерами
             </div>
-            <div class="schedule__items">
-               <a class="schedule__card" href="#">
-                  <div class="schedule__card-img">
-                     <img
-                        src="assets/img/schedule/schedule-1.png"
-                        alt="Карточка 1"
-                     />
-                  </div>
-                  <div class="schedule__card-content">
-                     <div class="schedule__card-header">
-                        <div class="schedule__card-header-right">
-                           <p class="schedule__card-title">
-                              Жениться Вам надо, барин!
-                           </p>
-                           <p class="schedule__card-city">Ярославль</p>
-                        </div>
-                        <div class="schedule__card-header-left">
-                           <p class="schedule__card-date">15 сентября,</p>
-                           <p class="schedule__card-time">19:00</p>
-                        </div>
-                     </div>
-                     <div class="schedule__card-desc">
-                        Известный спектакль из Москвы с участием заслуженных
-                        артистов.
-                     </div>
-                  </div>
-               </a>
 
-               <a class="schedule__card" href="#">
-                  <div class="schedule__card-img">
-                     <img
-                        src="assets/img/schedule/schedule-2.png"
-                        alt="Карточка 1"
-                     />
-                  </div>
-                  <div class="schedule__card-content">
-                     <div class="schedule__card-header">
-                        <div class="schedule__card-header-right">
-                           <p class="schedule__card-title">
-                              Сирано де Бержерак
-                           </p>
-                           <p class="schedule__card-city">Уфа</p>
+            <div class="schedule__items-container">
+               <div class="schedule__items">
+                  <a class="schedule__card" href="#">
+                     <div class="schedule__card-img">
+                        <img
+                           src="assets/img/schedule/schedule-1.png"
+                           alt="Карточка 1"
+                        />
+                     </div>
+                     <div class="schedule__card-content">
+                        <div class="schedule__card-header">
+                           <div class="schedule__card-header-right">
+                              <p class="schedule__card-title">
+                                 Жениться Вам надо, барин!
+                              </p>
+                              <p class="schedule__card-city">Ярославль</p>
+                           </div>
+                           <div class="schedule__card-header-left">
+                              <p class="schedule__card-date">15 сентября,</p>
+                              <p class="schedule__card-time">19:00</p>
+                           </div>
                         </div>
-                        <div class="schedule__card-header-left">
-                           <p class="schedule__card-date">19 сентября,</p>
-                           <p class="schedule__card-time">16:00</p>
+                        <div class="schedule__card-desc">
+                           Известный спектакль из Москвы с участием заслуженных
+                           артистов.
                         </div>
                      </div>
-                     <div class="schedule__card-desc">
-                        Спектакль из Санкт-Петербурга с участием народных
-                        артистов.
-                     </div>
-                  </div>
-               </a>
+                  </a>
 
-               <a class="schedule__card" href="#">
-                  <div class="schedule__card-img">
-                     <img
-                        src="assets/img/schedule/schedule-3.png"
-                        alt="Карточка 1"
-                     />
-                  </div>
-                  <div class="schedule__card-content">
-                     <div class="schedule__card-header">
-                        <div class="schedule__card-header-right">
-                           <p class="schedule__card-title">
-                              Салон красоты, или о чем говорят женщины
-                           </p>
-                           <p class="schedule__card-city">Краснодар</p>
+                  <a class="schedule__card" href="#">
+                     <div class="schedule__card-img">
+                        <img
+                           src="assets/img/schedule/schedule-2.png"
+                           alt="Карточка 1"
+                        />
+                     </div>
+                     <div class="schedule__card-content">
+                        <div class="schedule__card-header">
+                           <div class="schedule__card-header-right">
+                              <p class="schedule__card-title">
+                                 Сирано де Бержерак
+                              </p>
+                              <p class="schedule__card-city">Уфа</p>
+                           </div>
+                           <div class="schedule__card-header-left">
+                              <p class="schedule__card-date">19 сентября,</p>
+                              <p class="schedule__card-time">16:00</p>
+                           </div>
                         </div>
-                        <div class="schedule__card-header-left">
-                           <p class="schedule__card-date">22 сентября,</p>
-                           <p class="schedule__card-time">16:00</p>
+                        <div class="schedule__card-desc">
+                           Спектакль из Санкт-Петербурга с участием народных
+                           артистов.
                         </div>
                      </div>
-                     <div class="schedule__card-desc">
-                        Детективная комедия, где раскрываются истории о любви,
-                        предательстве и поиске себя!
-                     </div>
-                  </div>
-               </a>
+                  </a>
 
-               <a class="schedule__card" href="#">
-                  <div class="schedule__card-img">
-                     <img
-                        src="assets/img/schedule/schedule-4.jpg"
-                        alt="Карточка 1"
-                     />
-                  </div>
-                  <div class="schedule__card-content">
-                     <div class="schedule__card-header">
-                        <div class="schedule__card-header-right">
-                           <p class="schedule__card-title">
-                              Бальзаминовъ. Женитьба
-                           </p>
-                           <p class="schedule__card-city">
-                              Гастрольный спектакль
-                           </p>
+                  <a class="schedule__card" href="#">
+                     <div class="schedule__card-img">
+                        <img
+                           src="assets/img/schedule/schedule-3.png"
+                           alt="Карточка 1"
+                        />
+                     </div>
+                     <div class="schedule__card-content">
+                        <div class="schedule__card-header">
+                           <div class="schedule__card-header-right">
+                              <p class="schedule__card-title">
+                                 Салон красоты, или о чем говорят женщины
+                              </p>
+                              <p class="schedule__card-city">Краснодар</p>
+                           </div>
+                           <div class="schedule__card-header-left">
+                              <p class="schedule__card-date">22 сентября,</p>
+                              <p class="schedule__card-time">16:00</p>
+                           </div>
                         </div>
-                        <div class="schedule__card-header-left">
-                           <p class="schedule__card-date">9 июля</p>
-                           <p class="schedule__card-time">19:00</p>
+                        <div class="schedule__card-desc">
+                           Детективная комедия, где раскрываются истории о
+                           любви, предательстве и поиске себя!
                         </div>
                      </div>
-                     <div class="schedule__card-desc">
-                        Спектакль о наивном и самодовольном чиновнике Михаиле
-                        Бальзаминове, который мечтает выгодно жениться — не по
-                        любви, а по расчёту.
+                  </a>
+
+                  <a class="schedule__card" href="#">
+                     <div class="schedule__card-img">
+                        <img
+                           src="assets/img/schedule/schedule-4.jpg"
+                           alt="Карточка 1"
+                        />
                      </div>
-                  </div>
-               </a>
+                     <div class="schedule__card-content">
+                        <div class="schedule__card-header">
+                           <div class="schedule__card-header-right">
+                              <p class="schedule__card-title">
+                                 Бальзаминовъ. Женитьба
+                              </p>
+                              <p class="schedule__card-city">
+                                 Гастрольный спектакль
+                              </p>
+                           </div>
+                           <div class="schedule__card-header-left">
+                              <p class="schedule__card-date">9 июля</p>
+                              <p class="schedule__card-time">19:00</p>
+                           </div>
+                        </div>
+                        <div class="schedule__card-desc">
+                           Спектакль о наивном и самодовольном чиновнике Михаиле
+                           Бальзаминове, который мечтает выгодно жениться — не
+                           по любви, а по расчёту.
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="schedule__items schedule__items--hidden">
+                  <a class="schedule__card" href="#">
+                     <div class="schedule__card-img">
+                        <img
+                           src="assets/img/schedule/schedule-1.png"
+                           alt="Карточка 1"
+                        />
+                     </div>
+                     <div class="schedule__card-content">
+                        <div class="schedule__card-header">
+                           <div class="schedule__card-header-right">
+                              <p class="schedule__card-title">
+                                 Жениться Вам надо, барин!
+                              </p>
+                              <p class="schedule__card-city">Ярославль</p>
+                           </div>
+                           <div class="schedule__card-header-left">
+                              <p class="schedule__card-date">15 сентября,</p>
+                              <p class="schedule__card-time">19:00</p>
+                           </div>
+                        </div>
+                        <div class="schedule__card-desc">
+                           Известный спектакль из Москвы с участием заслуженных
+                           артистов.
+                        </div>
+                     </div>
+                  </a>
+
+                  <a class="schedule__card" href="#">
+                     <div class="schedule__card-img">
+                        <img
+                           src="assets/img/schedule/schedule-2.png"
+                           alt="Карточка 1"
+                        />
+                     </div>
+                     <div class="schedule__card-content">
+                        <div class="schedule__card-header">
+                           <div class="schedule__card-header-right">
+                              <p class="schedule__card-title">
+                                 Сирано де Бержерак
+                              </p>
+                              <p class="schedule__card-city">Уфа</p>
+                           </div>
+                           <div class="schedule__card-header-left">
+                              <p class="schedule__card-date">19 сентября,</p>
+                              <p class="schedule__card-time">16:00</p>
+                           </div>
+                        </div>
+                        <div class="schedule__card-desc">
+                           Спектакль из Санкт-Петербурга с участием народных
+                           артистов.
+                        </div>
+                     </div>
+                  </a>
+
+                  <a class="schedule__card" href="#">
+                     <div class="schedule__card-img">
+                        <img
+                           src="assets/img/schedule/schedule-3.png"
+                           alt="Карточка 1"
+                        />
+                     </div>
+                     <div class="schedule__card-content">
+                        <div class="schedule__card-header">
+                           <div class="schedule__card-header-right">
+                              <p class="schedule__card-title">
+                                 Салон красоты, или о чем говорят женщины
+                              </p>
+                              <p class="schedule__card-city">Краснодар</p>
+                           </div>
+                           <div class="schedule__card-header-left">
+                              <p class="schedule__card-date">22 сентября,</p>
+                              <p class="schedule__card-time">16:00</p>
+                           </div>
+                        </div>
+                        <div class="schedule__card-desc">
+                           Детективная комедия, где раскрываются истории о
+                           любви, предательстве и поиске себя!
+                        </div>
+                     </div>
+                  </a>
+
+                  <a class="schedule__card" href="#">
+                     <div class="schedule__card-img">
+                        <img
+                           src="assets/img/schedule/schedule-4.jpg"
+                           alt="Карточка 1"
+                        />
+                     </div>
+                     <div class="schedule__card-content">
+                        <div class="schedule__card-header">
+                           <div class="schedule__card-header-right">
+                              <p class="schedule__card-title">
+                                 Бальзаминовъ. Женитьба
+                              </p>
+                              <p class="schedule__card-city">
+                                 Гастрольный спектакль
+                              </p>
+                           </div>
+                           <div class="schedule__card-header-left">
+                              <p class="schedule__card-date">9 июля</p>
+                              <p class="schedule__card-time">19:00</p>
+                           </div>
+                        </div>
+                        <div class="schedule__card-desc">
+                           Спектакль о наивном и самодовольном чиновнике Михаиле
+                           Бальзаминове, который мечтает выгодно жениться — не
+                           по любви, а по расчёту.
+                        </div>
+                     </div>
+                  </a>
+               </div>
             </div>
 
-            <button class="button schedule__show-more-btn">Показать ещё</button>
+            <button
+               class="button schedule__show-more-btn"
+               id="show-more-schedule-button"
+            >
+               Показать ещё
+            </button>
          </div>
       </section>
 
@@ -675,7 +801,11 @@
                      </a>
                   </div>
                </div>
-               <form action="contacts.php" class="contacts__form">
+               <form
+                  method="POST"
+                  id="contact-form"
+                  class="contacts__form"
+               >
                   <input
                      class="contacts__input"
                      type="email"
