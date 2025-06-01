@@ -61,7 +61,6 @@
    flex-direction: column;
    max-width: 460px;
    width: 100%;
-   gap: 25px;
 }
 
 .contacts__input,
@@ -71,6 +70,25 @@
    background-color: var(--c-white);
    border: 1px solid var(--c-grey-dark);
    transition: 0.15s all linear;
+}
+
+.contacts__input.input-error, .contacts__textarea.input-error{
+   border-color: var(--c-red);
+}
+
+.contacts__error, .contacts__success{
+   line-height: 25px;
+   height: 25px;
+   font-size: 0.7rem;
+} 
+
+.contacts__error{
+   color: var(--c-red);
+}
+
+.contacts__success{
+   color: var(--c-green-bright);
+   text-align: center;
 }
 
 .contacts__textarea{

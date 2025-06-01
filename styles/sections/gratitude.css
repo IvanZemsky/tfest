@@ -20,11 +20,12 @@
    align-items: center;
    justify-content: center;
    gap: 150px;
+   transition: transform 0.5s ease-in-out;
 }
 
 .slider-img-wrap{
-   width: auto;
-   height: 400px;
+   width: 350px;
+   height: 500px;
 }
 
 .slider-img-wrap img{

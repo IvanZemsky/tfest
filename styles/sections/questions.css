@@ -62,7 +62,7 @@
    stroke: var(--c-white);
 }
 
-.questions--opened .questions__item-btn {
+.question--opened .questions__item-btn {
    transform: rotate(90deg);
 }
 
@@ -77,4 +77,13 @@
 
 .questions__item-text-wrapper {
    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+   .questions__item-title {
+      font-size: 0.8rem;
+   }
+   .questions__item-text{
+      font-size: 0.7rem;
+   }
 }

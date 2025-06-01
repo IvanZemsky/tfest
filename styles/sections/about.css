@@ -83,7 +83,7 @@
 }
 
 .about__quote-text {
-   margin-bottom: 20px;
+   margin-bottom: 1rem;
    font-size: 1.3rem;
 }
 
@@ -96,5 +96,27 @@
    }
    .about__card hr{
       margin: 0 auto;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .about__card {
+      padding: 20px;
+   }
+   .about__quote-text{
+      font-size: 0.9rem;
+   }
+
+}
+
+@media screen and (max-width: 545px) {
+   .about__card {
+      padding: 20px;
+   }
+   .about__quote-text{
+      font-size: 0.9rem;
+   }
+   .about__quote-card{
+      padding: 3.5rem 1rem 2rem 1rem;
    }
 }

@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
          const content = element.nextElementSibling;
          if (content.style.maxHeight) {
             content.style.maxHeight = null;
-            element.parentElement.parentElement.classList.remove(
-               "questions--opened"
+            element.parentElement.classList.remove(
+               "question--opened"
             );
          } else {
             content.style.maxHeight = content.scrollHeight + "px";
-            element.parentElement.parentElement.classList.add(
-               "questions--opened"
+            element.parentElement.classList.add(
+               "question--opened"
             );
          }
       });

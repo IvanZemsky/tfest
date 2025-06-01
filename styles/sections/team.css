@@ -55,6 +55,13 @@
 }
 
 .team__card-subtitle {
+   margin-top: auto;
    font-size: 0.7rem;
    font-weight: 300;
+}
+
+@media screen and (max-width: 650px) {
+   .team__card-subtitle {
+      font-size: 0.9rem;
+   }
 }

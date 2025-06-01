@@ -35,8 +35,23 @@
    background-color: none;
 }
 
+.footer__info-main{
+   text-align: right;
+}
+
 .footer__socials svg{
    width: 30px;
    height: auto;
    fill: var(--c-black);
+}
+
+@media screen and (max-width: 975px) {
+   .footer__info{
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+   }
+   .footer__info-main{
+      text-align: center;
+   }
 }

@@ -15,7 +15,7 @@ const sliderLine = document.querySelector(".slider-line");
 const widthOffset = document.querySelector(".slider").clientWidth;
 
 sliderLine.style.width = 3 * widthOffset + "px";
-sliderLine.style.left = "-" + widthOffset + "px";
+sliderLine.style.transform = "translateX(-" + widthOffset + "px)";
 
 let flat = true;
 
@@ -59,8 +59,8 @@ const prevImageGenerate = () => {
    const img = document.createElement("img");
 
    img.src = images[prevImage];
-   sliderImgWrap.append(img);
-   sliderLine.append(sliderImgWrap);
+   sliderImgWrap.prepend(img);
+   sliderLine.prepend(sliderImgWrap);
 };
 
 const nextSlide = () => {

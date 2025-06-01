@@ -33,7 +33,7 @@ textarea {
    resize: vertical;
 }
 
-button{
+button {
    border: none;
    cursor: pointer;
 }
@@ -43,8 +43,26 @@ a {
    color: inherit;
 }
 
-hr{
+hr {
    outline: none;
-   box-shadow:  none;
+   box-shadow: none;
    border: none;
+}
+
+@media screen and (max-width: 650px) {
+   html {
+      font-size: 17px;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   section.team,
+   section.questions,
+   section.advantages,
+   section.schedule,
+   section.portfolio,
+   section.about,
+   section.gratitude {
+      padding: 60px 0;
+   }
 }

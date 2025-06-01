@@ -26,10 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".about__quote-text"),
       document.querySelector(".about__quote-author"),
 
+      ...document.querySelectorAll(".team__card"),
+
+      ...document.querySelectorAll(".portfolio__card"),
+
+      ...document.querySelectorAll(".advantages__card"),
       ...document.querySelectorAll(".advantages__card-icon "),
 
       ...document.querySelectorAll(".title"),
       ...document.querySelectorAll(".desc"),
+
+      ...document.querySelectorAll(".questions__item"),
+
+      ...document.querySelectorAll(".schedule__card"),
    ];
 
    elements.forEach((element) => observer.observe(element));
