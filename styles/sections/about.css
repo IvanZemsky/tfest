@@ -28,7 +28,7 @@
 
 .about__card hr {
    max-width: 345px;
-   width: 100%;
+   width: 0;
    height: 4px;
    background-color: var(--c-red-light);
    border: none;

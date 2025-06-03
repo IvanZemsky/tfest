@@ -19,3 +19,9 @@
    height: 100px;
    width: auto;
 }
+
+@media screen and (max-width: 400px) {
+   .partners__items img {
+      height: 75px;
+   }
+}
